@@ -2,38 +2,35 @@
 <html>
   <head>
     <div class="container">
+
       <div class="left">
-        <h2>Headlines</h2>
+        <h1>Headlines</h1>
         <div id="headlines"></div>
       </div>
 
       <div class="right">
         <div id="thumbnail">
-          <div class="originalcontainer">
-            <span>Click a link to read a story!</span>
-          </div>
+          <div class="originalcontainer"></div>
         </div>
-        <div id="summary"></div>
         <div id="linktostory"></div>
       </div>
+
     </div>
+
     <script src='src/headlineRequest.js'></script>
     <script src='src/summaryRequest.js'></script>
     <script src='controller.js'></script>
 
     <script src='views/headlineView.js'></script>
 
-
-
     <script>
-          headlineRequest = new HeadlineRequest();
-          headlineRequest.makeRequest();
-          viewHeadline = new ViewHeadline(headlineRequest);
-          controller = new Controller(viewHeadline);
-          controller.renderHeadlines();
-        </script>
+      headlineRequest = new HeadlineRequest();
+      headlineRequest.makeRequest();
+      viewHeadline = new ViewHeadline(headlineRequest);
+      controller = new Controller(viewHeadline);
+      controller.renderHeadlines();
+    </script>
     <meta charset="utf-8">
-    <title></title>
   </head>
   <body>
 
